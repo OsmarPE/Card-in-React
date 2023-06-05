@@ -5,7 +5,6 @@ import ItemCard from './components/ItemCard'
 
 function App() {
 
-  const [active, setactive] = useState(false)
   const [indexItem, setindexItem] = useState(0)
 
   const iconsName = ['home', 'settings', 'lock']
@@ -23,6 +22,7 @@ function App() {
       description: 'This in the cab content, you can put anything you like in here'
     }
   ]
+
 
 
   return (
