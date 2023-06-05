@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ $color-black-100:#4B4863;
+ $color-purple-100:#EFEDFD;
+ $color-purple-200:#4C40BE;
+ $color-gray-100:#B0AFC0;
+
+
+$ff-primary: 'Outfit', sans-serif;
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+#root{
+    font-family: $ff-primary;
+    background-color: $color-purple-100;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-outlined{
+    transition: all 0.4s ease;
+}
+
+.card{
+    width: 90%;
+    max-width: 340px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 4px 4px 30px -8px rgba($color: #B0AFC0, $alpha: 0.10);
+    background-color: #fff;
+    &__heading{
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #b0afc076;
+    }
+    &__bar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 4rem;
+        background-color: $color-purple-200;
+        transition: all 0.4s ease;
+    }
+    &__item{
+        cursor: pointer;
+        width: 4rem;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        color: $color-gray-100;
+        &:hover{
+            .material-symbols-outlined{
+                color: $color-purple-200;
+            }
+        }
+        &.active{
+            color: $color-purple-200;
+        }
+    }
+    &__body{
+        padding: 1.4rem 1.4rem 2rem;
+    }
+}
+
+.slider{
+    overflow: hidden;
+    width: 100%;
+    &__content{
+        transition: all 0.4s ease;
+        width: 300%;
+        display: flex;
+    }
+    &__card{
+        width: 100%;
+    }
+    &__title{
+        color: $color-black-100;
+        font-size: 700;
+        font-size: 1.1rem;
+        margin-bottom: .8rem;
+    }
+    &__copy{
+        line-height: 1.4;
+    }
+}
+
